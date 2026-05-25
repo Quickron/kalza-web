@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-obsidian: #0b0f14;
+  --color-graphite: #1f2328;
+  --color-slate-brand: #6b7280;
+  --color-stone-brand: #e6ebeb;
+  --color-porcelain: #fafaf8;
+  --color-teal-brand: #0ea6a6;
+  --color-teal-bright: #2dd4d4;
+  --color-commerce: #2563eb;
+
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-fg: var(--primary-fg);
+  --color-accent: var(--accent);
+
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --radius-card: 1rem;
+}
+
+:root {
+  --bg: #fafaf8;
+  --fg: #0b0f14;
+  --muted: #4b5563;
+  --subtle: #6b7280;
+  --border: #e6ebeb;
+  --card: #ffffff;
+  --primary: #0ea6a6;
+  --primary-fg: #ffffff;
+  --accent: #2563eb;
+}
+
+.dark {
+  --bg: #0b0f14;
+  --fg: #fafaf8;
+  --muted: #b4bcc6;
+  --subtle: #8a939e;
+  --border: #1f2328;
+  --card: #11161d;
+  --primary: #2dd4d4;
+  --primary-fg: #0b0f14;
+  --accent: #60a5fa;
+}
+
+/* Force dark context regardless of current theme (e.g. FinalCTA dark slab) */
+.surface-dark {
+  --bg: #0b0f14;
+  --fg: #fafaf8;
+  --muted: #b4bcc6;
+  --subtle: #8a939e;
+  --border: #1f2328;
+  --card: #11161d;
+  --primary: #2dd4d4;
+  --primary-fg: #0b0f14;
+  --accent: #60a5fa;
+}
+
+html {
+  color-scheme: light;
+}
+.dark html,
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--primary-fg);
+}
+
+.bg-mesh {
+  background-image:
+    radial-gradient(at 20% 10%, color-mix(in oklab, var(--primary) 18%, transparent) 0, transparent 50%),
+    radial-gradient(at 80% 0%, color-mix(in oklab, var(--accent) 12%, transparent) 0, transparent 50%),
+    radial-gradient(at 50% 90%, color-mix(in oklab, var(--primary) 10%, transparent) 0, transparent 60%);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--fg) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--fg) 6%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
