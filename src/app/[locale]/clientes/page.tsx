@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { LinkButton } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/config";
+import { partnerStores } from "@/lib/stores";
 
 export async function generateMetadata({
   params,
@@ -65,15 +66,20 @@ function CustomersContent() {
         <Container>
           <SectionHeader title={t("partnersTitle")} description={t("partnersBody")} />
           <div className="mt-10 grid gap-5 md:grid-cols-2">
-            <article className="flex h-32 items-center justify-center rounded-3xl border border-[var(--border)] bg-[var(--card)] p-8">
-              <Image
-                src="/images/stores/mosali_logo.png"
-                alt={t("mosaliName")}
-                width={190}
-                height={83}
-                className="max-h-20 w-auto object-contain"
-              />
-            </article>
+            {partnerStores.map((store) => (
+              <article
+                key={store.name}
+                className="flex h-32 items-center justify-center rounded-3xl border border-[var(--border)] bg-[var(--card)] p-8"
+              >
+                <Image
+                  src={store.logo}
+                  alt={store.name}
+                  width={190}
+                  height={83}
+                  className="max-h-20 w-auto object-contain"
+                />
+              </article>
+            ))}
           </div>
         </Container>
       </Section>

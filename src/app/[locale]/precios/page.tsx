@@ -1,5 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
 import { PricingTable } from "@/components/sections/PricingTable";
+import { siteConfig } from "@/lib/config";
 
 export async function generateMetadata({
   params,
@@ -17,6 +19,7 @@ export default async function PricingPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  if (!siteConfig.showPricing) notFound();
   setRequestLocale(locale);
   return <PricingTable />;
 }

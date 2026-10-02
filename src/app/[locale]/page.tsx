@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { RetailProblem } from "@/components/sections/RetailProblem";
 import { ShopperProblem } from "@/components/sections/ShopperProblem";
 import { Partners } from "@/components/sections/Partners";
+import { EasyInstall } from "@/components/sections/EasyInstall";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default async function HomePage({
@@ -19,6 +20,7 @@ export default async function HomePage({
       <RetailProblem />
       <ShopperProblem />
       <Partners />
+      <EasyInstall />
       <FinalCTA />
     </>
   );

@@ -18,7 +18,9 @@ export function Footer() {
           <FooterCol title={t("product")}>
             <FooterLink href="/productos">{nav("products")}</FooterLink>
             <FooterLink href="/soluciones">{nav("solutions")}</FooterLink>
-            <FooterLink href="/precios">{nav("pricing")}</FooterLink>
+            {siteConfig.showPricing && (
+              <FooterLink href="/precios">{nav("pricing")}</FooterLink>
+            )}
           </FooterCol>
           <FooterCol title={t("company")}>
             <FooterLink href="/nosotros">{nav("about")}</FooterLink>

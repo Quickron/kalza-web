@@ -2,10 +2,35 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Section, Eyebrow } from "@/components/ui/Section";
+import { partnerStores, type PartnerStore } from "@/lib/stores";
 
-const partners = [
-  { name: "Mosali Boutique", logo: "/images/stores/mosali_logo.png" },
-];
+const cardClassName =
+  "flex h-24 w-56 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--bg)] px-8 py-6";
+
+function PartnerLogo({ store }: { store: PartnerStore }) {
+  const logo = (
+    <Image
+      src={store.logo}
+      alt={store.name}
+      width={170}
+      height={74}
+      className="max-h-16 w-auto object-contain"
+    />
+  );
+
+  if (!store.url) return <div className={cardClassName}>{logo}</div>;
+
+  return (
+    <a
+      href={store.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${cardClassName} transition-colors hover:border-[var(--primary)]`}
+    >
+      {logo}
+    </a>
+  );
+}
 
 export function Partners() {
   const t = useTranslations("home");
@@ -20,19 +45,8 @@ export function Partners() {
           </h2>
         </div>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          {partners.map((p) => (
-            <div
-              key={p.name}
-              className="flex h-24 w-56 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--bg)] px-8 py-6"
-            >
-              <Image
-                src={p.logo}
-                alt={p.name}
-                width={170}
-                height={74}
-                className="max-h-16 w-auto object-contain"
-              />
-            </div>
+          {partnerStores.map((store) => (
+            <PartnerLogo key={store.name} store={store} />
           ))}
         </div>
       </Container>
