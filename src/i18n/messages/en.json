@@ -179,7 +179,12 @@
     "platformWoo": "WooCommerce",
     
     "platformOther": "Other / Own site",
-    "preferredTime": "Preferred time",
+    "preferredTime": "Times you're available for the meeting",
+    "timesHelp": "Pick every time that works for you. The meeting lasts {minutes} minutes ({zone} time).",
+    "timesDayLabel": "Meeting day",
+    "timesNone": "You haven't picked any time yet.",
+    "timesRemove": "Remove time {slot}",
+    "timesRequired": "Pick at least one time for the meeting.",
     "notes": "Notes (optional)",
     "submit": "Request demo",
     "submitting": "Sending…",

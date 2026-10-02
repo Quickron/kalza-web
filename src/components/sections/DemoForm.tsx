@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { CheckCircle2, Send } from "lucide-react";
 import { submitDemo, type ActionResult } from "@/lib/actions";
 import { ServiceErrorToast } from "@/components/ui/ServiceErrorToast";
+import { TimeSlotPicker } from "@/components/sections/TimeSlotPicker";
 
 const initial: ActionResult | null = null;
 
@@ -72,11 +73,10 @@ export function DemoForm() {
             ]}
             error={errors.platform}
           />
-          <TextInput
+          <TimeSlotPicker
             name="preferredTime"
             label={t("preferredTime")}
             error={errors.preferredTime}
-            placeholder="Lun – Vie, 10:00 – 18:00"
           />
         </div>
         <div className="mt-5">

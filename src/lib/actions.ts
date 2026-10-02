@@ -19,7 +19,7 @@ const demoSchema = z.object({
   email: z.string().email(),
   catalogSize: z.enum(["small", "medium", "large"]),
   platform: z.enum(["shopify", "woocommerce", "vtex", "other"]),
-  preferredTime: z.string().optional(),
+  preferredTime: z.string().min(1),
   notes: z.string().optional(),
 });
 
