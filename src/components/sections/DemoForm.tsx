@@ -68,6 +68,8 @@ export function DemoForm() {
             required
             options={[
               { value: "shopify", label: t("platformShopify") },
+              { value: "wix", label: t("platformWix") },
+              { value: "jumpseller", label: t("platformJumpseller") },
               { value: "woocommerce", label: t("platformWoo") },
               { value: "other", label: t("platformOther") },
             ]}

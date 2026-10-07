@@ -177,6 +177,8 @@
     "platform": "Plataforma e-commerce",
     "platformShopify": "Shopify",
     "platformWoo": "WooCommerce",
+    "platformJumpseller": "Jumpseller",
+    "platformWix": "Wix",
     "platformOther": "Otra / Página propia",
     "preferredTime": "Horarios disponibles para la reunión",
     "timesHelp": "Elige todos los horarios que te acomoden. La reunión dura {minutes} minutos (hora de {zone}).",
