@@ -90,7 +90,7 @@ export function DemoForm() {
             id="f-notes"
             name="notes"
             rows={4}
-            className="mt-1.5 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] p-3 text-sm outline-none focus-visible:border-[var(--primary)]"
+            className="mt-1.5 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] p-3 text-base outline-none focus-visible:border-[var(--primary)] sm:text-sm"
           />
         </div>
         <div className="mt-6">
@@ -148,7 +148,7 @@ function TextInput({
         autoComplete={autoComplete}
         placeholder={placeholder}
         aria-invalid={!!error}
-        className="mt-1.5 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] px-3 text-sm outline-none focus-visible:border-[var(--primary)]"
+        className="mt-1.5 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] px-3 text-base outline-none focus-visible:border-[var(--primary)] sm:text-sm"
       />
       {error && (
         <p className="mt-1.5 text-xs text-red-600 dark:text-red-300">{error}</p>
@@ -186,7 +186,7 @@ function Select({
         required={required}
         defaultValue=""
         aria-invalid={!!error}
-        className="mt-1.5 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] px-3 text-sm outline-none focus-visible:border-[var(--primary)]"
+        className="mt-1.5 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] px-3 text-base outline-none focus-visible:border-[var(--primary)] sm:text-sm"
       >
         <option value="" disabled>
           —

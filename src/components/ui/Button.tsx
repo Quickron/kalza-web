@@ -55,6 +55,7 @@ type LinkButtonProps = CommonProps & {
   href: string;
   external?: boolean;
   ariaLabel?: string;
+  onClick?: () => void;
 };
 
 export function LinkButton({
@@ -65,6 +66,7 @@ export function LinkButton({
   href,
   external,
   ariaLabel,
+  onClick,
 }: LinkButtonProps) {
   const classes = cn(base, variants[variant], sizes[size], className);
   if (external) {
@@ -75,13 +77,14 @@ export function LinkButton({
         rel="noopener noreferrer"
         className={classes}
         aria-label={ariaLabel}
+        onClick={onClick}
       >
         {children}
       </a>
     );
   }
   return (
-    <Link href={href} className={classes} aria-label={ariaLabel}>
+    <Link href={href} className={classes} aria-label={ariaLabel} onClick={onClick}>
       {children}
     </Link>
   );

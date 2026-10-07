@@ -68,7 +68,7 @@ export function EasyInstall() {
   const common = useTranslations("common");
 
   return (
-    <Section className="py-14">
+    <Section className="py-14 sm:py-14 lg:py-14">
       <Container>
         <div className="rounded-3xl border border-[var(--border)] bg-[var(--card)] p-8 text-center sm:p-12">
           <MousePointerClick className="mx-auto h-8 w-8 text-[var(--primary)]" />

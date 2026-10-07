@@ -36,7 +36,7 @@ export function Partners() {
   const t = useTranslations("home");
 
   return (
-    <Section className="border-y border-[var(--border)] bg-[var(--card)] py-14">
+    <Section className="border-y border-[var(--border)] bg-[var(--card)] py-14 sm:py-14 lg:py-14">
       <Container>
         <div className="text-center">
           <Eyebrow>{t("partnersEyebrow")}</Eyebrow>

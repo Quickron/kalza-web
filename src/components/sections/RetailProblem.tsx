@@ -21,7 +21,7 @@ export function RetailProblem() {
           title={t("retailProblemTitle")}
           description={t("retailProblemBody")}
         />
-        <div className="mt-12 grid gap-4 sm:grid-cols-4">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map(({ value, label, icon: Icon }) => (
             <div
               key={label}

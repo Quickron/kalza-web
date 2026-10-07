@@ -46,7 +46,7 @@ function ProductsContent() {
             title={t("title")}
             description={t("subtitle")}
           />
-          <div className="mt-12 rounded-3xl border border-[var(--border)] bg-[var(--card)] p-8 sm:p-12">
+          <div className="mt-12 rounded-3xl border border-[var(--border)] bg-[var(--card)] p-4 sm:p-12">
             <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.2fr]">
               <div>
                 <Eyebrow>{t("kalzaTag")}</Eyebrow>

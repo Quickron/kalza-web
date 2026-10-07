@@ -33,7 +33,7 @@ export function LocaleSwitcher() {
         value={locale}
         onChange={(e) => onChange(e.target.value)}
         disabled={isPending}
-        className="h-11 rounded-full border border-[var(--border)] bg-[var(--card)] pl-9 pr-3 text-sm font-medium text-[var(--fg)] outline-none transition-colors hover:bg-[var(--bg)] focus-visible:outline-2 focus-visible:outline-[var(--primary)]"
+        className="h-11 rounded-full border border-[var(--border)] bg-[var(--card)] pl-9 pr-3 text-base font-medium text-[var(--fg)] outline-none transition-colors hover:bg-[var(--bg)] focus-visible:outline-2 focus-visible:outline-[var(--primary)] sm:text-sm"
       >
         {routing.locales.map((l) => (
           <option key={l} value={l}>

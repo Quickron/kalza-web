@@ -127,7 +127,7 @@ function Field({
         autoComplete={autoComplete}
         aria-invalid={!!error}
         aria-describedby={error ? `${id}-err` : undefined}
-        className="mt-1.5 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] px-3 text-sm text-[var(--fg)] outline-none transition-colors focus-visible:border-[var(--primary)]"
+        className="mt-1.5 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] px-3 text-base text-[var(--fg)] outline-none transition-colors focus-visible:border-[var(--primary)] sm:text-sm"
       />
       {error && (
         <p id={`${id}-err`} className="mt-1.5 text-xs text-red-600 dark:text-red-300">
@@ -169,7 +169,7 @@ function FieldArea({
         placeholder={placeholder}
         aria-invalid={!!error}
         aria-describedby={error ? `${id}-err` : undefined}
-        className="mt-1.5 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] p-3 text-sm text-[var(--fg)] outline-none transition-colors focus-visible:border-[var(--primary)]"
+        className="mt-1.5 w-full rounded-xl border border-[var(--border)] bg-[var(--bg)] p-3 text-base text-[var(--fg)] outline-none transition-colors focus-visible:border-[var(--primary)] sm:text-sm"
       />
       {error && (
         <p id={`${id}-err`} className="mt-1.5 text-xs text-red-600 dark:text-red-300">

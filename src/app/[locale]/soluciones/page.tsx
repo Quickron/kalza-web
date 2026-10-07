@@ -113,9 +113,9 @@ function Step({ n, text }: { n: number; text: string }) {
 function FlowDiagram({ labels }: { labels: string[] }) {
   return (
     <div className="rounded-3xl border border-[var(--border)] bg-[var(--bg)] p-8">
-      <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+      <div className="flex flex-col items-stretch gap-4 sm:flex-row sm:items-stretch sm:justify-between">
         {labels.map((l, i) => (
-          <div key={l} className="flex flex-1 items-center gap-4">
+          <div key={l} className="flex flex-1 items-stretch gap-4">
             <div className="flex-1 rounded-2xl border border-[var(--border)] bg-[var(--card)] p-4 text-center">
               <p className="font-mono text-xs uppercase tracking-wider text-[var(--subtle)]">
                 Step {i + 1}
@@ -146,7 +146,7 @@ function BeforeAfter() {
           sizes="(min-width: 1024px) 180px, 33vw"
           className="object-cover"
         />
-        <p className="absolute bottom-4 left-4 rounded-full bg-white/85 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-[var(--subtle)] backdrop-blur dark:bg-black/45 dark:text-white/80">
+        <p className="absolute bottom-2 left-2 rounded-full bg-white/85 px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-[var(--subtle)] backdrop-blur sm:bottom-4 sm:left-4 sm:px-3 sm:text-xs dark:bg-black/45 dark:text-white/80">
           Foto del cliente
         </p>
       </div>
@@ -158,7 +158,7 @@ function BeforeAfter() {
           sizes="(min-width: 1024px) 180px, 33vw"
           className="object-cover"
         />
-        <p className="absolute bottom-4 left-4 rounded-full bg-white/85 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-[var(--subtle)] backdrop-blur dark:bg-black/45 dark:text-white/80">
+        <p className="absolute bottom-2 left-2 rounded-full bg-white/85 px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-[var(--subtle)] backdrop-blur sm:bottom-4 sm:left-4 sm:px-3 sm:text-xs dark:bg-black/45 dark:text-white/80">
           Prenda
         </p>
       </div>
@@ -170,7 +170,7 @@ function BeforeAfter() {
           sizes="(min-width: 1024px) 180px, 33vw"
           className="object-cover"
         />
-        <p className="absolute bottom-4 left-4 inline-flex items-center rounded-full bg-white/90 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-[var(--primary)] backdrop-blur dark:bg-black/50">
+        <p className="absolute bottom-2 left-2 inline-flex items-center rounded-full bg-white/90 px-2 py-1 font-mono text-[10px] uppercase tracking-wider text-[var(--primary)] backdrop-blur sm:bottom-4 sm:left-4 sm:px-3 sm:text-xs dark:bg-black/50">
           <Sparkles className="mr-1 h-3 w-3" aria-hidden />
           Prueba Virtual
         </p>

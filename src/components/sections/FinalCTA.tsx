@@ -9,7 +9,7 @@ export function FinalCTA() {
   return (
     <Section>
       <Container>
-        <div className="surface-dark relative overflow-hidden rounded-3xl border border-white/10 bg-obsidian p-10 sm:p-14 lg:p-20">
+        <div className="surface-dark relative overflow-hidden rounded-3xl border border-white/10 bg-obsidian p-6 sm:p-14 lg:p-20">
           <div className="bg-mesh absolute inset-0 opacity-80" aria-hidden />
           <div className="relative max-w-2xl">
             <h2 className="text-balance text-3xl font-semibold tracking-tight text-porcelain sm:text-4xl lg:text-5xl">

@@ -11,8 +11,8 @@ export function Footer() {
   return (
     <footer className="border-t border-[var(--border)] bg-[var(--card)]">
       <Container className="py-14">
-        <div className="grid gap-10 lg:grid-cols-[2fr_1fr_1fr_1fr]">
-          <div>
+        <div className="grid gap-10 sm:grid-cols-3 lg:grid-cols-[2fr_1fr_1fr_1fr]">
+          <div className="sm:col-span-3 lg:col-span-1">
             <Logo />
           </div>
           <FooterCol title={t("product")}>
