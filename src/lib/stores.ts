@@ -15,4 +15,9 @@ export const partnerStores: PartnerStore[] = [
     logo: "/images/stores/mkdlondon-logo.jpg",
     url: "https://www.mkdlondon.cl/",
   },
+  {
+    name: "Gina Anselmi",
+    logo: "/images/stores/gina-anselmi-logo.jpg",
+    url: "https://ginaanselmi.cl",
+  },
 ];
