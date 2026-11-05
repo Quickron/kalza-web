@@ -16,6 +16,7 @@ export const plans: Plan[] = [
     tryOnsPerMonth: "500",
     features: [
       "Widget embebible",
+      "Instalación en pocos clics (Shopify, Wix, WooCommerce)",
       "Recomendación de talla IA",
       "1 tienda conectada",
       "Soporte por email",
@@ -43,7 +44,7 @@ export const plans: Plan[] = [
     features: [
       "Todo lo de Growth",
       "SLA 99,9% uptime",
-      "Integración custom (Shopify / WooCommerce / headless)",
+      "Integración custom (headless y sitios propios)",
       "SSO y controles avanzados",
       "Account manager dedicado",
       "Onboarding white-glove",
